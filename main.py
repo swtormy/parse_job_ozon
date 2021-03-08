@@ -225,14 +225,3 @@ def get_level(allLevs=False, Trainee=False, Junior_Specialist=False, Specialist=
 
 
 
-def printPetNames(limit=50, **kwargs):
-    if kwargs.get("query") == None: kwargs.update({'query': 'query='})
-    if kwargs.get("city") == None: kwargs.update({'city': ''})
-    if kwargs.get("departments") == None: kwargs.update({'departments': ''})
-    if kwargs.get("employment") == None: kwargs.update({'employment': ''})
-    if kwargs.get("experience") == None: kwargs.update({'experience': ''})
-    if kwargs.get("specialization") == None: kwargs.update({'specialization': ''})
-    if kwargs.get("level") == None: kwargs.update({'level': ''})
-
-    print(f'https://job.ozon.ru/api/vacancy?{kwargs.get("query")}&limit={limit}{kwargs.get("city")}{kwargs.get("departments")}{kwargs.get("employment")}{kwargs.get("experience")}{kwargs.get("specialization")}{kwargs.get("level")}')
-
